@@ -1,8 +1,20 @@
-interface Country {
+export interface Country {
     name: string;
     alpha3code: string;
     independent: boolean;
 }
+
+export interface CountryInfo {
+    name: string;
+    region: string;
+    population: number;
+    borders: string[];
+    flags: {
+        svg: string;
+    }
+}
+
+
 
 export const getCountryInfo = async (): Promise<Country[]> => {
     try {
